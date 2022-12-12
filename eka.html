@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Bootstrap 5 Website Example</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+  <script>
+    $(document).ready(function(){
+        let br = "<br/>"
+        let fimg = "<div class='fakeimg'>Fake Image</div>";
+        let home = "<p>Tässä vaihtoehdossa sivu ei vaihdu tai liiku, vaan buttoneilla vaihdetaan sisältöä." + 
+            " Yhteydenotto formi ei toimi vielä oikein kun vaatii PHP tukea toimiakseen paremmin." + 
+            " PHP ei taas pyöri kuin palvelimella johon se on asennettu."+
+            " Laitan esimerkki sivuston Git Hubiin jossa ei ole PHP:tä</p>";
+        let about = "<p>Laitoin tuon yhteydenotto formin tuonne footeriin, mutta se voidaan yhtähyvin tuoda esiin myös buttonilla"+
+            " ja laittaa muuta tietoa footeriin. Myös capcha vois olla ihan järkevä maili formin yhteydessä, niin ei botit ota yhteyttä.</p>"
+        let now = "<p>Tähän voi laittaa vaikka ajankohtaisia tietoja. Voidaan vielä pohtia mitä kaikke tarvii ja mitä ei. Kuinka paljon kuvia ja mihin väliin."+
+            " En laita vielä oikeita kuvia niin pysyy toistaiseksi rakenne kevyenä. Kuvien kokoakin voi vielä miettiä tai haluaako asetella lomittain joitain kuvia ym.</p>"
+        let contact = "<h2 id='ota'>Lähetä postia:</h2>" +
+            "<form action='mailto:someone@example.com' method='post' enctype='text/plain'>" +
+            "Name:<br>" +
+            "<input type='text' name='name'>" + br +
+            "E-mail:<br>" +
+            "<input type='text' name='mail'>" + br +
+            "Message:<br>" +
+            "<textarea id='message' name='message' rows='4' cols='50'>Kirjoita viesti</textarea>" + br + br +
+            "<input class='btn bg-orange'type='submit' value='Send'>" +
+            "<input class='btn bg-orange'type='reset' value='Reset'>" +
+            "</form>"
+        $("#home").click(function(){
+            $("#content").html("<h3>Heippa</h3>"+ home + fimg);
+        });
+        $("#about").click(function(){
+            $("#content").html("<h3>Tietoa meistä</h3>" + about + fimg);
+        });
+        $("#ajan").click(function(){
+            $("#content").html("<h3>Ajankohtaista</h3>" + fimg + now);
+        });
+        $("#contact").click(function(){
+            $("#content").html("<h3>Otayhteyttä</h3>" + contact);
+        });
+    });
+    </script>
+  <style>
+  .fakeimg {
+    width: 50%;
+    height: 200px;
+    background: #aaa;
+    color: black;
+    margin: 2%;
+  }
+  .bg-orange {
+    background-color: orange;
+  }
+  .orange{
+    color: orange;
+  }
+  body {
+    background-image: url("bg.jpg");
+}
+  </style>
+</head>
+<body class="bg-orange">
+
+<div class="p-5 bg-black orange text-center">
+  <h1>Bootstrap 5 Page</h1>
+  <h3>Ensimmäinen varsinanainen esimerkki</h3>
+    <p>
+        Footterissa linkki takaisin!!!
+    </p> 
+</div>
+<nav class="navbar navbar-expand-sm bg-dark navbar-dark sticky-top">
+    <div class="container-fluid">
+      <ul class="navbar-nav">
+        <li class="nav-item">
+            <button class="btn orange bg-black" id="home">Home</button>
+        </li>
+        <li class="nav-item">
+            <button class="btn orange bg-black" id="about">About</button>
+        </li>
+        <li class="nav-item">
+            <button class="btn orange bg-black" id="ajan">Ajankohtaista</button>
+        </li>
+        <li class="nav-item">
+            <button class="btn orange bg-black" id="contact">Otayhteyttä</button>
+        </li>
+      </ul>
+    </div>
+  </nav>
+
+<div style="color:orange;"class="container bg-black p-5 mt-5">
+  <div class="row" id="content">
+    <h3>Heippa</h3><p>Tässä vaihtoehdossa sivu ei vaihdu tai liiku, vaan buttoneilla vaihdetaan sisältöä. 
+        Yhteydenotto formi ei toimi vielä oikein kun vaatii PHP tukea toimiakseen paremmin. 
+        PHP ei taas pyöri kuin palvelimella johon se on asennettu. Laitan esimerkki sivuston Git Hubiin jossa ei ole PHP:tä</p>
+    <div class="fakeimg">Fake Image</div>
+  </div>
+</div>
+
+<div class="mt-5 p-4 bg-black orange text-center">
+    <h2 id="ota">Lähetä postia:</h2>
+
+    <form action="mailto:someone@example.com" method="post" enctype="text/plain">
+    Name:<br>
+    <input type="text" name="name"><br>
+    E-mail:<br>
+    <input type="text" name="mail"><br>
+    Message:<br>
+    <textarea id="message" name="message" rows="4" cols="50">Kirjoita viesti</textarea>
+    <br><br>
+    <input class="btn bg-orange"type="submit" value="Send">
+    <input class="btn bg-orange"type="reset" value="Reset">
+    </form>
+    <p>Footer...<br> firman nimi, logo ja copyright 2022-...</p>
+    <a class="btn btn-danger" href="index.html" role="button">Takaisin...</a>
+</div>
+
+</body>
+</html>
