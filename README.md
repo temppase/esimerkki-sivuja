@@ -3,12 +3,12 @@
 ## Esimerkki sivuja firmalle
 
 ### ToDo
-[x] LAMP asennus
-[x] Esimerkki sivut
-[] Sivujen toiminnan parannus mobiilille
-[] CAPTCHA?
-[] Mahdollinen hampurilais menu?
-[] WP asennus 
+- [x] LAMP asennus
+- [x] Esimerkki sivut
+- [] Sivujen toiminnan parannus mobiilille
+- [] CAPTCHA?
+- [] Mahdollinen hampurilais menu?
+- [] WP asennus 
 
 ### Links
 
