@@ -3,6 +3,12 @@
     background: #aaa;
     color: black;
   }
+  .fakeimg_small {
+    width: 30%;
+    height: 200px;
+    background: #aaa;
+    color: black;
+  }
   .bg-orange {
     background-color: orange;
   }
