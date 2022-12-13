@@ -19,17 +19,18 @@
             " ja laittaa muuta tietoa footeriin. Myös capcha vois olla ihan järkevä maili formin yhteydessä, niin ei botit ota yhteyttä.</p>"
         let now = "<p>Tähän voi laittaa vaikka ajankohtaisia tietoja. Voidaan vielä pohtia mitä kaikke tarvii ja mitä ei. Kuinka paljon kuvia ja mihin väliin."+
             " En laita vielä oikeita kuvia niin pysyy toistaiseksi rakenne kevyenä. Kuvien kokoakin voi vielä miettiä tai haluaako asetella lomittain joitain kuvia ym.</p>"
-        let contact = "<h2 id='ota'>Lähetä postia:</h2>" +
-            "<form action='mailto:someone@example.com' method='post' enctype='text/plain'>" +
-            "Name:<br>" +
-            "<input type='text' name='name'>" + br +
-            "E-mail:<br>" +
-            "<input type='text' name='mail'>" + br +
-            "Message:<br>" +
-            "<textarea id='message' name='message' rows='4' cols='50'>Kirjoita viesti</textarea>" + br + br +
-            "<input class='btn bg-orange'type='submit' value='Send'>" +
-            "<input class='btn bg-orange'type='reset' value='Reset'>" +
-            "</form>"
+        let contact = "<form id='emailForm' name='emailForm' method='post' action='' >" +
+                      "<strong>Online Contact Form</strong>" +
+                      "<div class='mb-3'>" +
+                      "<label>Email :</label><br>" +
+                      "<input name='email' type='text' id='email'>" +
+                      "</div>" +
+                      "<div class='mb-3'>" +
+                      "<label>Message :</label><br>" +
+                      "<textarea name='msg' rows='5' id='msg'></textarea>" +
+                      "</div>" +
+                      "<input class='btn bg-orange' name='SubmitBtn' type='submit' id='SubmitBtn' value='Submit'>" +
+                      "</form>"
         $("#home").click(function(){
             $("#content").html("<h3>Heippa</h3>"+ home + fimg);
         });
@@ -101,19 +102,18 @@
 </div>
 
 <div class="mt-5 p-4 bg-black orange text-center">
-    <h2 id="ota">Lähetä postia:</h2>
-
-    <form action="mailto:someone@example.com" method="post" enctype="text/plain">
-    Name:<br>
-    <input type="text" name="name"><br>
-    E-mail:<br>
-    <input type="text" name="mail"><br>
-    Message:<br>
-    <textarea id="message" name="message" rows="4" cols="50">Kirjoita viesti</textarea>
-    <br><br>
-    <input class="btn bg-orange"type="submit" value="Send">
-    <input class="btn bg-orange"type="reset" value="Reset">
-    </form>
+  <form id="emailForm" name="emailForm" method="post" action="" >
+    <strong>Online Contact Form</strong>
+    <div class="mb-3">
+      <label>Email :</label><br>
+      <input name="email" type="text" id="email">
+    </div>
+    <div class="mb-3">
+      <label>Message :</label><br>
+      <textarea name="msg" rows="5" id="msg"></textarea>
+    </div>
+        <input class="btn bg-orange" name="SubmitBtn" type="submit" id="SubmitBtn" value="Submit">
+  </form>
     <p>Footer...<br> firman nimi, logo ja copyright 2022-...</p>
     <a class="btn btn-danger" href="index.html" role="button">Takaisin...</a>
 </div>
