@@ -5,10 +5,11 @@
 ### ToDo
 - [x] LAMP asennus
 - [x] Esimerkki sivut
-- [ ] Sivujen toiminnan parannus mobiilille
+- [x] Sivujen toiminnan parannus mobiilille
 - [ ] CAPTCHA?
 - [ ] Mahdollinen hampurilais menu?
-- [ ] WP asennus 
+- [x] WP asennus (koko kehitys ympäristön pitäisi nyt toimia)
+- [x] PHP kehitys aloitettu
 
 ### Links
 
