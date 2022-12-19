@@ -10,6 +10,7 @@
 - [ ] Mahdollinen hampurilais menu?
 - [x] WP asennus (koko kehitys ympäristön pitäisi nyt toimia)
 - [x] PHP kehitys aloitettu
+- [ ] Logo
 
 ### Links
 
