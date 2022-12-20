@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fi">
 <head>
   <title>Bootstrap 5 Website Example 1</title>
   <meta charset="utf-8">
@@ -8,41 +8,31 @@
   <link rel="stylesheet" href="style.css">
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
-  <script>
+ <!--Valikko skripti-->
+ <script>
     $(document).ready(function(){
         let br = "<br/>"
-        let fimg = "<div class='fakeimg_small'>Fake Image</div>";
-        let about = "<p>Laitoin tuon yhteydenotto formin tuonne footeriin, mutta se voidaan yhtähyvin tuoda esiin myös buttonilla"+
-            " ja laittaa muuta tietoa footeriin. Myös capcha vois olla ihan järkevä maili formin yhteydessä, niin ei botit ota yhteyttä.</p>"
-        let now = "<p>Tähän voi laittaa vaikka ajankohtaisia tietoja. Voidaan vielä pohtia mitä kaikke tarvii ja mitä ei. Kuinka paljon kuvia ja mihin väliin."+
-            " En laita vielä oikeita kuvia niin pysyy toistaiseksi rakenne kevyenä. Kuvien kokoakin voi vielä miettiä tai haluaako asetella lomittain joitain kuvia ym.</p>"
-        let contact = "<form id='emailForm' name='emailForm' method='post' action='' >" +
-                      "<strong>Online Contact Form</strong>" +
-                      "<div class='col mb-3'>" +
-                      "<label>Email :</label><br>" +
-                      "<input name='email' type='text' id='email'>" +
-                      "</div>" +
-                      "<div class='col mb-3'>" +
-                      "<label>Message :</label><br>" +
-                      "<textarea name='msg' rows='5' id='msg'></textarea>" +
-                      "</div>" +
-                      "<input class='btn bg-orange' name='SubmitBtn' type='submit' id='SubmitBtn' value='Submit'>" +
-                      "</form>"
+        let fimg = "<div class='col-md-6'><div class='fakeimg'>Fake Image</div></div>";
+        let about = "<div class='col-md-6'><p>No niin sain tätäkin vaihtoehtoa vähän paranneltua. Sisältöä ja otsikoita voi vielä pohtia."+
+            " Kannattaa testata tätäkin koneella ja mobiilisti jos mahdollistaä. Yhteyden otto formiin voisi olla hyvä CAPTCHA.</p></div>";
+        let now = "<div class='col-md-6'><p>Tähän voi laittaa vaikka ajankohtaisia tietoja. Voidaan vielä pohtia mitä kaikke tarvii ja mitä ei. Kuinka paljon kuvia ja mihin väliin."+
+            " En laita vielä oikeita kuvia niin pysyy toistaiseksi rakenne kevyenä. Kuvien kokoakin voi vielä miettiä tai haluaako asetella lomittain joitain kuvia ym.</p></div>";
+        let contact = "<a class='btn text-black bg-warning m-2' href='#contact'>Ota yhteyttä</a>";
         $("#about").click(function(){
             $("#content").html("<h3>Tietoa meistä</h3>" + about + fimg);
         });
         $("#ajan").click(function(){
-            $("#content").html("<h3>Ajankohtaista</h3>" + fimg + now);
-        });
-        $("#contact").click(function(){
-            $("#content").html(contact);
+            $("#content").html("<h3>Ajankohtaista</h3>" + now + fimg);
         });
     });
   </script>
 </head>
+ <!--Sivu-->
 <body class="bg-img bg-orange">
+   <!--Header-->
   <div class="bg-img orange text-center">
     <div class="overlay p-5">
+      <img src="Logot/p_logo_dirty.png" class="logo" alt="Logo_2">
       <h1>Bootstrap 5 Page</h1>
       <h3>Ensimmäinen varsinanainen esimerkki</h3>
         <p>
@@ -50,8 +40,8 @@
         </p>
         <h3>Heippa</h3>
         <div class="row">
-          <div class="col-3"></div>
-          <p class="col-6">
+          <div class="col-3">   <!--Auttaa keskityksessä--></div>
+          <p class="col-md-6">
             Tässä vaihtoehdossa sivu ei vaihdu tai liiku, vaan buttoneilla vaihdetaan sisältöä. 
             Yhteydenotto formi ei toimi vielä oikein kun vaatii PHP tukea toimiakseen paremmin. 
             PHP ei taas pyöri kuin palvelimella johon se on asennettu. Laitan esimerkki sivuston Git Hubiin jossa ei ole PHP:tä. 
@@ -60,9 +50,7 @@
         </div> 
     </div> 
   </div>
-<div class="p-5 bg-black orange text-center">
-  
-</div>
+   <!--Valikko-->
 <nav class="navbar navbar-expand-sm bg-dark navbar-dark sticky-top">
     <div class="container-fluid">
       <ul class="navbar-nav">
@@ -73,23 +61,29 @@
             <button class="btn orange bg-black" id="ajan">Ajankohtaista</button>
         </li>
         <li class="nav-item">
-            <button class="btn orange bg-black" id="contact">Otayhteyttä</button>
+          <a class='btn text-black bg-warning m-2' href='#contact'>Ota yhteyttä</a>
         </li>
       </ul>
     </div>
-  </nav>
-
-<div style="color:orange;"class="container bg-black p-5 mt-5">
-  <div class="row" id="content">
-    <h3>Tietoa meistä</h3>
-    <p>Laitoin tuon yhteydenotto formin tuonne footeriin, mutta se voidaan yhtähyvin tuoda esiin myös buttonilla 
-       ja laittaa muuta tietoa footeriin. Myös capcha vois olla ihan järkevä maili formin yhteydessä, niin ei botit ota yhteyttä.
+</nav>
+ <!--Sisältö-->
+<div class="container orange bg-black p-5 mt-5 cont-curve">
+  <div class="row" id="content"> 
+      <h3>Tietoa meistä</h3>
+      <div class="col-md-6">
+       <p>
+        No niin sain tätäkin vaihtoehtoa vähän paranneltua. Sisältöä ja otsikoita voi vielä pohtia. Kannattaa testata tätäkin koneella ja mobiilisti jos mahdollista. 
+        Yhteyden otto formiin voisi olla hyvä CAPTCHA.
       </p>
-    <div class="fakeimg_small">Fake Image</div>
+    </div>
+    <div class="col-md-6">
+      <div class="fakeimg">Fake Image</div>
+    </div> 
   </div>
+  
 </div>
-
-<div class="mt-5 p-4 bg-black orange text-center">
+ <!--Footer-->
+<div class="mt-5 p-4 bg-black orange text-center" id="contact">
   <form id="emailForm" name="emailForm" method="post" action="" >
     <strong>Online Contact Form</strong>
     <div class="col mb-3">

@@ -51,4 +51,12 @@
   .round-c {
     border-radius: 25px;
   }
+  .logo{
+    background-image: radial-gradient(gray,#333);
+    opacity: 0.7;
+    border-radius: 50%;
+  }
+  .cont-curve{
+    border-radius: 50px;
+  }
 
